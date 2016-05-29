@@ -10,11 +10,16 @@ To test it :
       && bower i
       && google-chrome index.html
 
+## Commands
+
+- **Escape** Pause
+- **Space** Fire
+- **Left/Right Arrow** Go left/right
+
 ## Todo
 
 - Extract configuration stuff from the lib
-- Create point counter
 - Add the level notion
-- Make collisions (meteors/fire/ship)
+- Finish collisions (meteors/ship)
 
 ![alt Screenshot](https://github.com/bcolucci/spaceinvader/blob/master/assets/screenshot.png "Screenshot")
