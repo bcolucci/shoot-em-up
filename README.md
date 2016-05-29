@@ -10,4 +10,11 @@ To test it :
       && bower i
       && google-chrome index.html
 
+## Todo
+
+- Extract configuration stuff from the lib
+- Create the meteors
+- Detect the collisions between meteors/ship
+- Make the ship able to fire 
+
 ![alt Screenshot](https://github.com/bcolucci/spaceinvader/blob/master/assets/screenshot.png "Screenshot")
