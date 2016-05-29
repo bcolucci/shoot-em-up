@@ -13,8 +13,8 @@ To test it :
 ## Todo
 
 - Extract configuration stuff from the lib
-- Create the meteors
-- Detect the collisions between meteors/ship
-- Make the ship able to fire 
+- Create point counter
+- Add the level notion
+- Make collisions (meteors/fire/ship)
 
 ![alt Screenshot](https://github.com/bcolucci/spaceinvader/blob/master/assets/screenshot.png "Screenshot")
