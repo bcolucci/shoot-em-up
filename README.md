@@ -21,5 +21,6 @@ To test it :
 - Extract configuration stuff from the lib
 - Add the level notion
 - Finish collisions (meteors/ship)
+- **Arnaud**: Improve key binding
 
 ![alt Screenshot](https://github.com/bcolucci/spaceinvader/blob/master/assets/screenshot.png "Screenshot")
