@@ -23,4 +23,4 @@ To test it :
 
 - [Authors](https://github.com/bcolucci/shoot-em-up/blob/master/AUTHORS.md)
 
-![alt Screenshot](https://github.com/bcolucci/spaceinvader/blob/master/assets/screenshot.png "Screenshot")
+![alt Screenshot](https://github.com/bcolucci/shoot-em-up/blob/master/screenshot.png "Screenshot")
