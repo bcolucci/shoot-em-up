@@ -1,14 +1,17 @@
 
-# Space Invader
+# Shoot'em Up
 
-I'm trying to make a simple Space Invader in a functional programing way.
+I'm trying to make a simple Shoot'em Up in a functional programing way.
 
 To test it :
 
-    git clone https://github.com/bcolucci/spaceinvader.git \
-      && cd spaceinvader \
+    git clone https://github.com/bcolucci/shoot-em-up.git \
+      && cd shoot-em-up \
+      && npm i \
       && bower i
-      && google-chrome index.html
+      && npm start
+
+    google-chrome http://localhost:3000/
 
 ## Commands
 
@@ -16,10 +19,8 @@ To test it :
 - **Space** Fire
 - **Left/Right Arrow** Go left/right
 
-## Todo
+## Others
 
-- Extract configuration stuff from the lib
-- Add the level notion
-- Finish collisions (meteors/ship)
+- [Authors](https://github.com/bcolucci/shoot-em-up/blob/master/AUTHORS.md)
 
 ![alt Screenshot](https://github.com/bcolucci/spaceinvader/blob/master/assets/screenshot.png "Screenshot")

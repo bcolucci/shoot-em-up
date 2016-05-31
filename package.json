@@ -1,0 +1,41 @@
+{
+  "name": "shoot-em-up",
+  "version": "0.0.1",
+  "description": "A little Shoot-em Up into Space in PF",
+  "main": "index.js",
+  "keywords": [
+    "shoot",
+    "them",
+    "up",
+    "space",
+    "functional"
+  ],
+  "author": "Brice Colucci <brice.colucci@gmail.com>",
+  "contributors": [
+    {
+      "name": "Arnaud Laval",
+      "email": "alaval@wuha.io"
+    }
+  ],
+  "homepage": "https://github.com/bcolucci/shoot-em-up",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bcolucci/shoot-em-up.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bcolucci/shoot-em-up/issues"
+  },
+  "dependencies": {
+    "config": "^1.20.4",
+    "express": "^4.13.4",
+    "immutable": "^3.8.1",
+    "random-string": "^0.1.2",
+    "socket.io": "^1.4.6",
+    "sprintf": "^0.1.5"
+  }
+}

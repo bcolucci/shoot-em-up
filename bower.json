@@ -1,18 +1,13 @@
 {
-  "name": "spaceinvader",
+  "name": "shoot-em-up",
   "authors": [
     "Brice Colucci <brice.colucci@gmail.com>"
   ],
-  "description": "A little space invader",
-  "main": "spi-lib.js",
-  "keywords": [
-    "space",
-    "invader"
-  ],
-  "license": "MIT",
-  "homepage": "https://github.com/bcolucci/spaceinvader",
+  "main": "public/client.js",
   "private": true,
   "dependencies": {
-    "immutable": "^3.8.1"
+    "socket.io-client": "^1.4.6",
+    "jquery": "^2.2.4",
+    "bacon": "^0.7.84"
   }
 }

@@ -7,5 +7,5 @@ body, html{
 canvas {
   display: block;
   margin: auto;
-  background: #000 url('background.jpg');
+  background: #000 url('images/background.jpg');
 }
