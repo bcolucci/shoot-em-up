@@ -77,11 +77,18 @@ const ShootEmUpClient = socket => {
     drawFires(canvas, state.fires);
   };
 
+  const keyCodeName = keyCode => {
+    if (keyCode === 27) return 'Escape';
+    if (keyCode === 37) return 'ArrowLeft';
+    if (keyCode === 39) return 'ArrowRight';
+    if (keyCode === 32) return ' ';
+  };
+
   const emitKeyPress = keyType => keyCode => socket.emit(keyType, keyCode);
   const emitKeyDownPress = emitKeyPress('keyDown');
   const emitKeyUpPress = emitKeyPress('keyUp');
 
-  const isKey = keys => event => [].concat(keys).indexOf(event.key) > -1;
+  const isKey = keys => event => [].concat(keys).indexOf(keyCodeName(event.keyCode)) > -1;
 
   const property = prop => o => o[prop];
   const keyProperty = property('key');

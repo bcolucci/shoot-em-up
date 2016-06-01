@@ -51,6 +51,7 @@ const onKeyDown = socket => keyCode => {
 };
 
 const onNextFrame = socket => () => {
+  if (!game) return;
   const actions = keyPool.map(lib.Action.fromKeyCode).concat(lib.Action.DO_NOTHING);
   lastState = game.nextFrame(actions, lastState);
   clearKeyPool();
