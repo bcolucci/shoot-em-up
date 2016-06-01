@@ -84,7 +84,7 @@ Action.fromKeyCode = keyCode => {
   if (keyCode === 'Escape') return Action.PAUSE;
   if (keyCode === 'ArrowLeft') return Action.MOVE_LEFT;
   if (keyCode === 'ArrowRight') return Action.MOVE_RIGHT;
-  if (keyCode === ' ') return Action.FIRE;
+  if (keyCode === 'Space') return Action.FIRE;
   return Action.DO_NOTHING;
 };
 

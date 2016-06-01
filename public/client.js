@@ -77,27 +77,25 @@ const ShootEmUpClient = socket => {
     drawFires(canvas, state.fires);
   };
 
-  const keyCodeName = keyCode => {
-    if (keyCode === 27) return 'Escape';
-    if (keyCode === 37) return 'ArrowLeft';
-    if (keyCode === 39) return 'ArrowRight';
-    if (keyCode === 32) return ' ';
-  };
+  const KEY_CODES = { 27: 'Escape', 32: 'Space', 37: 'ArrowLeft', 39: 'ArrowRight' };
+  const KEY_CODES_VALUES = Object.keys(KEY_CODES);
+
+  const isValidKeyCode = keyCode => KEY_CODES_VALUES.indexOf(keyCode) > - 1;
+  const isValidKeyEvent = keys => event => [].concat(keys).indexOf(event.keyCode) > -1;
 
   const emitKeyPress = keyType => keyCode => socket.emit(keyType, keyCode);
   const emitKeyDownPress = emitKeyPress('keyDown');
   const emitKeyUpPress = emitKeyPress('keyUp');
 
-  const isKey = keys => event => [].concat(keys).indexOf(keyCodeName(event.keyCode)) > -1;
-
   const property = prop => o => o[prop];
-  const keyProperty = property('key');
+  const keyCodeProperty = property('keyCode');
 
-  const keyEventStream = eventType => $(window).asEventStream(eventType)
-    .filter(isKey([ ' ', 'Escape', 'ArrowLeft', 'ArrowRight' ]));
+  const keyEventStream = eventType => $(window).asEventStream(eventType).filter(isValidKeyEvent);
 
-  keyEventStream('keydown').map(keyProperty).onValue(emitKeyDownPress);
-  keyEventStream('keyup').map(keyProperty).onValue(emitKeyUpPress);
+  const toKeyName = keyCode => KEY_CODES[keyCode];
+
+  keyEventStream('keydown').map(keyCodeProperty).map(toKeyName).onValue(emitKeyDownPress);
+  keyEventStream('keyup').map(keyCodeProperty).map(toKeyName).onValue(emitKeyUpPress);
 
   let canvas;
   socket.on('nextFrame', state => {
