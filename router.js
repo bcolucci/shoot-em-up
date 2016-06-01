@@ -36,8 +36,6 @@ const onKeyUp = socket => keyCode => {
   //console.log('%s key up %s', socket.id, keyCode);
   if(keyCode === 'Escape') return;
   const temp = keyPool.filter(key => {
-    if(keyCode === 'ArrowLeft') return key !== keyCode && key !== 'ArrowRight';
-    if(keyCode === 'ArrowRight') return key !== keyCode && key !== 'ArrowLeft';
     return key !== keyCode;
   });
   keyPool.splice(0, keyPool.length);
