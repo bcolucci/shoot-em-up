@@ -51,7 +51,7 @@ const Field = Immutable.Record({
   yPosition: 0
 });
 
-const ShipFire = Immutable.Record({ x: 0, y: 0 });
+const ShipFire = Immutable.Record({ x: 0, y: 0 , width:32});
 
 const Ship = Immutable.Record({
   width: DEFAULT_SHIP_WIDTH,
@@ -135,7 +135,7 @@ const Game = function () {
       const inXRange = inRange(meteor.x - COLLISION_PADDING, meteor.x + meteor.width + COLLISION_PADDING);
       const inYRange = y => y <= (meteor.y + meteor.height + COLLISION_PADDING);
       fires.forEach(fire => {
-        if (!inXRange(fire.x) || !inYRange(fire.y)) return;
+        if (!inXRange(fire.x+Math.floor(fire.width/2)) || !inYRange(fire.y)) return;
         mappedMeteor = meteor.set('hits', meteor.hits + 1);
         firesToRemove.push(fire);
         if (!isMeteorDestroyed(mappedMeteor)) return;
